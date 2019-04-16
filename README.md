@@ -25,25 +25,29 @@ INSTALLED_APPS = [</br>
    
 3)dans le fichier {{pages/views.py}} ajouter le code suivant qui permet d'importer la classe HttpResponse et d'afficher un</br> message lors d'appel de la fonction {{homePageView}}</br>
 </br>
+</br>=====================================</br>
 from django.http import HttpResponse
 
 def homePageView(request):</br>
     return HttpResponse('Hello, World!')</br>
-   4) dans le fichier {{pages/urls.py}} ajouter le code suivant qui permet d'importer la classe path et le la view </br> homePageView </br>
-en utilisant urlpatterns</br>
+</br>=====================================</br>
+4) dans le fichier {{pages/urls.py}} ajouter le code suivant qui permet d'importer la classe path et le la view </br> homePageView en utilisant urlpatterns</br>
+</br>=====================================</br>
 from django.urls import path</br>
 from .views import homePageView</br>
-urlpatterns = [</br>
-    path('', homePageView, name='home')</br>
-]</br>
-
+urlpatterns = [ path('', homePageView, name='home')]</br>
+</br>=====================================</br>
+</br>
 5) dans le fichier {{helloworld_project/urls.py}} ajouter le code suivant qui permet d'importer path et include et définit 
 </br>le fichier url de notre application</br>
+</br>=====================================</br>
 from django.contrib import admin</br>
 from django.urls import path, include # Nouveau</br> 
 
-urlpatterns = [ path('admin/', admin.site.urls), path('', include('pages.urls')),]</br>
- #Nouveau</br>
-
+urlpatterns = [ path('admin/', admin.site.urls),</br>
+		path('', include('pages.urls')),#Nouveau]</br>
+ 
+</br>=====================================</br>
+</br>
 6) lancer la commande suivant  {{python manage.py runserver}}</br>
 et visiter http://127.0.0.1:8000</br>
