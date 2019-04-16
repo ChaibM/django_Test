@@ -1,7 +1,8 @@
 
 
-1)Creation d'une application par la commande 
-		python manage.py startapp pages
+1)Creation d'une application par la commande </br>
+
+{{python manage.py startapp pages}}
 
 $tree pages
 admin.py : Fichier de configuration de l'application intégrée Django Admin</br>
