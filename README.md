@@ -4,9 +4,9 @@
 		python manage.py startapp pages
 
 $tree pages
-admin.py : Fichier de configuration de l'application intégrée Django Admin
-apps.py  : Fichier de configuration pour l'application
-migrations :garde la trace de toutes les modifications apportées à notre modèles.py
+admin.py : Fichier de configuration de l'application intégrée Django Admin</br>
+apps.py  : Fichier de configuration pour l'application</br>
+migrations :garde la trace de toutes les modifications apportées à notre modèles.py</br>
    └── __init__.py
 models.py: la définition du modèles de base de données, que Django traduit automatiquement en tables de base de données
 tests.py : Concernant le test de l'application
